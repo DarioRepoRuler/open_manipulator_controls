@@ -12,7 +12,7 @@ $ roslaunch open_manipulator_controllers joint_trajectory_controller.launch sim:
 (GravityCompensationController)
 # Gazebo Simulation
 # Set trasmission to effort and motor mode to current first
-$ roslaunch open_manipulator_controllers gravity_compensation_controller.launch 
+$ roslaunch open_manipulator_controllers gravity_compensation_controller.launch sim:=true
 
 # Real Robot
 $ roslaunch open_manipulator_controllers gravity_compensation_controller.launch sim:=false

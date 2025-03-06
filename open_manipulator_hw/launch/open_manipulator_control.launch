@@ -14,5 +14,5 @@
 
   <!-- send robot urdf to param server -->
   <param name="robot_description"
-    command="$(find xacro)/xacro --inorder '$(find open_manipulator_description)/urdf/open_manipulator_robot.urdf.xacro'"/>
+    command="$(find xacro)/xacro --inorder '$(find open_manipulator_6dof_description)/urdf/open_manipulator_6dof.urdf.xacro'"/>
 </launch>
