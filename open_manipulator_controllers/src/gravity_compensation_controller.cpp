@@ -23,6 +23,7 @@ namespace open_manipulator_controllers
 bool GravityCompensationController::init(
     hardware_interface::RobotHW* robot_hardware, ros::NodeHandle& node_handle)
 {
+  ROS_INFO("[GravityCompensationController] Init");
   // Joint interface
   effort_joint_interface_ =
       robot_hardware->get<hardware_interface::EffortJointInterface>();
@@ -122,6 +123,7 @@ void GravityCompensationController::update(const ros::Time& time,
   for (size_t i = 0; i < kdl_chain_.getNrOfJoints(); i++)
   {
     effort_joint_handles_[i].setCommand(tau_(i));
+    ROS_INFO("Joint %d: %f", i, tau_(i));
   }
 }
 

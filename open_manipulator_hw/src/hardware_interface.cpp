@@ -30,7 +30,7 @@ HardwareInterface::HardwareInterface(ros::NodeHandle nh, ros::NodeHandle private
   port_name_ = priv_node_handle_.param<std::string>("usb_port", "/dev/ttyUSB0");
   baud_rate_ = priv_node_handle_.param<int32_t>("baud_rate", 1000000);
   yaml_file_ = priv_node_handle_.param<std::string>("yaml_file", "");
-  interface_ = priv_node_handle_.param<std::string>("interface", "position");
+  interface_ = priv_node_handle_.param<std::string>("interface", "effort");
 
   /************************************************************
   ** Register Interfaces

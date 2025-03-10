@@ -21,6 +21,18 @@
 
   <!-- gravity_compensation_controller -->
   <rosparam file="$(find open_manipulator_controllers)/config/gravity_compensation_controller.yaml" command="load"/>
+  <!-- <rosparam file="$(find open_manipulator_6dof_gazebo)/config/open_manipulator_6dof_controller_torque.yaml" command="load"/> -->
   <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
     output="screen" args="gravity_compensation_controller"/>
+  <!-- <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
+  output="screen" ns="open_manipulator_6dof" args="joint_state_controller
+                                               joint1_effort
+                                               joint2_effort
+                                               joint3_effort
+                                               joint4_effort
+                                               joint5_effort
+                                               joint6_effort
+                                               gripper_position
+                                               gripper_sub_position"/> -->
+
 </launch>
